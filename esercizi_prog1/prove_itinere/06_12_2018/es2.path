@@ -1,0 +1,31 @@
+// Questo esercizio è praticamente identico al 03_09_2019. Basta applicare questa path.
+
+diff --git a/esercizi_prog1/prove_itinere/03_09_2019/es2.cpp b/esercizi_prog1/prove_itinere/03_09_2019/es2.cpp
+index 33b7ce4..1355a98 100644
+--- a/esercizi_prog1/prove_itinere/03_09_2019/es2.cpp
++++ b/esercizi_prog1/prove_itinere/03_09_2019/es2.cpp
+@@ -2,14 +2,14 @@
+ 
+ using namespace std;
+ 
+-bool calcola(string*** arr, int n, int m, short a, short b, string s) {
++bool calcola(string*** arr, int n, int m, short k, string s) {
+     for (int i = 0; i < m; i++) {
+         int nStr = 0;
+         for (int j = 0; j < n; j++) {
+             string str = *arr[j][i];
+             if (str.contains(s)) nStr++;  // Supportato solo dal C++23, usa -std=c++2b su clang/gcc
+         }
+-        if (nStr >= a && nStr <= b) return true;
++        if (nStr >= k) return true;
+     }
+     return false;
+ }
+@@ -30,5 +30,5 @@ int main() {  // Funzione main non richiesta ai fini dell'esercizio. Usata solo
+     // diodaw aaabbbb
+     // dioddd abbbbbb
+ 
+-    cout << calcola(matrice, 2, 2, 1, 1, "dio") << endl << "Esco...";
++    cout << calcola(matrice, 2, 2, 1, "dio") << endl << "Esco...";
+ }
+\ No newline at end of file
