@@ -14,7 +14,7 @@ bool calcola(int **arr, int n, int m, double w) {
         for (int j = 0; j < n; j++) {
             conta += arr[j][i];
         }
-        if (conta + sommaDiagonaleSec > w) return true;
+        if ((double)conta / sommaDiagonaleSec > w) return true;
     }
     return false;
 }
