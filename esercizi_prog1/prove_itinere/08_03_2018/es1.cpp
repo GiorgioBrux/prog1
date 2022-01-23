@@ -2,10 +2,10 @@
 
 using namespace std;
 
-bool calcolo(int*** arr, int n, int m) {
+bool calcolo(int*** arr, int n) {
     int somma = 0;
     for (int i = 0; i < n - 1; i++) {
-        somma += *arr[i + 1][m - i - 1];
+        somma += *arr[i + 1][n - i - 1];
     }
     if (somma % n == 0)
         return true;
@@ -29,5 +29,5 @@ int main() {  // Funzione main non richiesta ai fini dell'esercizio. Usata solo 
     // 1 2
     // 3 4
     // La 'diagonale sotto quella secondaria' in questo caso è semplicemente 4, che è divisibile per 2.
-    cout << calcolo(arr, 2, 2);
+    cout << calcolo(arr, 2);
 }
